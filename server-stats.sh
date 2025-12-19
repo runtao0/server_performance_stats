@@ -1,4 +1,4 @@
-dispaly_cpu_usage () {
+display_cpu_usage () {
     echo "CPU usage:"
     iostat -c 1 5 | awk -F' ' '$6 ~ /[0-9.]+/ {print 100 - $6 "% used"}'
 }
